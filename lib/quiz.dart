@@ -31,7 +31,9 @@ class _QuizState extends State<Quiz> {
               ],
             ),
           ),
-          child: activeScreen == 'start-screen' ? StartScreen(switchScreen) : QuestionScreen(),
+          child: activeScreen == 'start-screen'
+              ? StartScreen(switchScreen)
+              : QuestionScreen(),
         ),
       ),
     );
