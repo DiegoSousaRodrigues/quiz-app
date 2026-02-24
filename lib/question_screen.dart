@@ -28,7 +28,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 30),
-            ...currentQuestions.answers.map((cq) => AnswerButton(text: cq, onTap: () {})),
+            ...currentQuestions.getShuffleAnswers().map((cq) => AnswerButton(text: cq, onTap: () {})),
           ],
         ),
       ),
