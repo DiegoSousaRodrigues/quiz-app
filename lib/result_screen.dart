@@ -8,7 +8,7 @@ class ResultScreen extends StatelessWidget {
 
   const ResultScreen({super.key, required this.chooseAnswers, required this.restartQuiz});
 
-  List<Map<String, Object>> getSummaryData() {
+  List<Map<String, Object>> get getSummaryData {
     List<Map<String, Object>> summary = [];
 
     for (var i = 0; i < chooseAnswers.length; i++) {
@@ -27,7 +27,7 @@ class ResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final summaryData = getSummaryData();
+    final summaryData = getSummaryData;
     final int numOfTotalQuestion = questions.length;
     final int numCorrectQuestion = summaryData.where((s) => s['correct_answer'] == s['user_answer']).length;
 
